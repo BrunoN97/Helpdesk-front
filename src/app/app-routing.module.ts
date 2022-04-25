@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {
     path: '',
     component: NavComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'tecnicos', component: TecnicoListComponent },
