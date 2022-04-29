@@ -1,0 +1,100 @@
+<div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWidth">Atualizar Técnico</h1>
+    <img
+      class="fullWidth"
+      src="assets/img/suporte.svg"
+      alt="Imagem de navegação"
+    />
+    <section class="section">
+      <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary"
+        >Admin</mat-checkbox
+      >
+      <mat-checkbox
+        [checked]="true"
+        (click)="addPerfil(1)"
+        class="margin"
+        color="primary"
+        >Cliente</mat-checkbox
+      >
+      <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary"
+        >Técnico</mat-checkbox
+      >
+    </section>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>Nome</mat-label>
+      <input
+        required
+        [formControl]="nome"
+        matInput
+        maxlength="50"
+        placeholder="Ex.. Maria José"
+        [(ngModel)]="tecnico.nome"
+        name="nome"
+      />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>CPF</mat-label>
+      <input
+        required
+        [formControl]="cpf"
+        matInput
+        mask="000.000.000-00"
+        placeholder="Ex.. 000.000.000-00"
+        [(ngModel)]="tecnico.cpf"
+        name="cpf"
+      />
+      <mat-icon matSuffix>badge</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>E-mail</mat-label>
+      <input
+        required
+        [formControl]="email"
+        matInput
+        placeholder="Ex.. alguem@mail.com"
+        [(ngModel)]="tecnico.email"
+        name="email"
+      />
+      <mat-icon matSuffix>alternate_email</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+      <mat-label>Senha</mat-label>
+      <input
+        required
+        [formControl]="senha"
+        type="password"
+        matInput
+        placeholder="Ex.. 1234"
+        [(ngModel)]="tecnico.senha"
+        name="senha"
+      />
+      <mat-icon matSuffix>vpn_key</mat-icon>
+    </mat-form-field>
+
+    <button
+      [disabled]="!validaCampos()"
+      class="fullWidth mat-elevation-z4"
+      mat-flat-button
+      color="primary"
+      (click)="update()"
+    >
+      Atualizar
+    </button>
+    <button
+      routerLink="../../"
+      class="fullWidth mat-elevation-z4"
+      mat-stroked-button
+      color="primary"
+    >
+      Cancelar
+    </button>
+  </form>
+
+  <p class="fullWidth">dev Bruno Nobre</p>
+</div>
