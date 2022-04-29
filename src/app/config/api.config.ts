@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl: 'https://helpdesk-nobre.herokuapp.com',
+  baseUrl: 'https://helpdesk-bruno.herokuapp.com',
 };
