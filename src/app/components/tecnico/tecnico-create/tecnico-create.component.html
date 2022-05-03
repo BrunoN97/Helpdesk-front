@@ -10,7 +10,11 @@
       <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary"
         >Admin</mat-checkbox
       >
-      <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary"
+      <mat-checkbox
+        [checked]="true"
+        (click)="addPerfil(1)"
+        class="margin"
+        color="primary"
         >Cliente</mat-checkbox
       >
       <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary"

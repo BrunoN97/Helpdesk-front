@@ -1,3 +1,4 @@
+import { LoaderModule } from './components/loader/loader.module';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -79,6 +80,7 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
       progressBar: true,
     }),
     NgxMaskModule.forRoot(),
+    LoaderModule,
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],

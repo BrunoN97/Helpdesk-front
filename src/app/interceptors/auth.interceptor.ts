@@ -1,3 +1,4 @@
+import { LoaderService } from './../components/loader/loader.service';
 import { Injectable } from '@angular/core';
 import {
   HttpRequest,
@@ -6,12 +7,12 @@ import {
   HttpInterceptor,
   HTTP_INTERCEPTORS,
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { finalize, Observable } from 'rxjs';
 import { CloneVisitor } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor() {}
+  constructor(public loaderService: LoaderService) {}
 
   intercept(
     request: HttpRequest<any>,
@@ -23,9 +24,13 @@ export class AuthInterceptor implements HttpInterceptor {
       const cloneReq = request.clone({
         headers: request.headers.set('Authorization', `Bearer ${token}`),
       });
-      return next.handle(cloneReq);
+      return next
+        .handle(cloneReq)
+        .pipe(finalize(() => this.loaderService.hide()));
     } else {
-      return next.handle(request);
+      return next
+        .handle(request)
+        .pipe(finalize(() => this.loaderService.hide()));
     }
   }
 }
