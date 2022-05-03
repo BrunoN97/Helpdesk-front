@@ -6,6 +6,7 @@ import { LoaderModule } from './components/loader/loader.module';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Para trabalhar com formulários no Angular 12
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,6 +44,7 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
 import { NgxMaskModule } from 'ngx-mask';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     ClienteUpdateComponent,
     ClienteDeleteComponent,
     ClienteListComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     // Forms
     FormsModule,
     ReactiveFormsModule,
