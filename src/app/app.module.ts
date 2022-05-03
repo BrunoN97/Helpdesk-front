@@ -1,3 +1,7 @@
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { LoaderModule } from './components/loader/loader.module';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
@@ -51,6 +55,10 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     TecnicoCreateComponent,
     TecnicoUpdateComponent,
     TecnicoDeleteComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
+    ClienteListComponent,
   ],
   imports: [
     BrowserModule,
