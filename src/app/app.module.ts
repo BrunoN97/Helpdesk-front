@@ -1,3 +1,4 @@
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
@@ -47,6 +48,9 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
 import { LoadingComponent } from './components/loading/loading.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
+import { CadastroOrcamentoComponent } from './components/orcamento/cadastro-orcamento/cadastro-orcamento.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -66,6 +70,8 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
     LoadingComponent,
     ChamadoListComponent,
     ChamadoCreateComponent,
+    ChamadoUpdateComponent,
+    CadastroOrcamentoComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +93,8 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     // Forms
     FormsModule,
     ReactiveFormsModule,

@@ -1,0 +1,78 @@
+.container {
+  width: 22%;
+  margin: auto auto 3rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  color: #5775d0;
+}
+
+.titulo {
+  margin-bottom: 2rem;
+}
+
+img {
+  height: 16rem;
+}
+
+.material-icons {
+  color: #5775d0;
+}
+
+.tipo-orcamento mat-form-field,
+label {
+  width: 90%;
+  margin-top: 0.3rem;
+  margin-right: 0.7rem;
+}
+
+.mes-ano mat-form-field,
+label {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+mat-datepicker-toggle {
+  color: #5775d0;
+}
+
+.cloud-provider mat-form-field,
+label {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.valor mat-form-field,
+label {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+label {
+  color: #5775d0;
+}
+
+button {
+  margin-top: 0.5rem;
+  width: 49%;
+}
+
+.botoes {
+  justify-content: space-between;
+  display: flex;
+}
+
+p {
+  margin-top: 3rem;
+  opacity: 0.5;
+}

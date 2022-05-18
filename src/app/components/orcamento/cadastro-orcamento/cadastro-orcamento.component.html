@@ -1,0 +1,65 @@
+<div class="container mat-elevation-z8">
+  <div class="titulo">
+    <h1 class="full-width">Cadastrar Orçamento</h1>
+  </div>
+
+  <div class="tipo-orcamento">
+    <label for="">Tipo de orçamento: </label>
+    <mat-form-field appearance="outline">
+      <mat-label>Selecione um tipo</mat-label>
+      <mat-select required>
+        <mat-option value="0">ABERTO</mat-option>
+        <mat-option value="1">EM ANDAMENTO</mat-option>
+        <mat-option value="2">ENCERRADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <a mat-list-item routerLink="clientes">
+      <i class="material-icons"> add_circle_outline </i>
+    </a>
+  </div>
+
+  <div class="mes-ano">
+    <label> Mês/Ano: </label>
+    <mat-form-field appearance="outline">
+      <mat-label>Informe o mês/ano</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="cloud-provider">
+    <label>Cloud provider: </label>
+    <mat-form-field appearance="outline">
+      <mat-label>Selecione um provider</mat-label>
+      <mat-select required>
+        <mat-option value="0">ABERTO</mat-option>
+        <mat-option value="1">EM ANDAMENTO</mat-option>
+        <mat-option value="2">ENCERRADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="valor">
+    <label>Valor: </label>
+    <mat-form-field class="full-width" appearance="outline">
+      <input required matInput placeholder="R$ Digite o valor" />
+    </mat-form-field>
+  </div>
+
+  <div class="botoes">
+    <button
+      routerLink="../"
+      class="mat-elevation-z4"
+      mat-stroked-button
+      color="primary"
+    >
+      Cancelar
+    </button>
+    <button class="mat-elevation-z4" mat-flat-button color="primary">
+      Salvar
+    </button>
+  </div>
+
+  <p class="full-width">dev Bruno Nobre</p>
+</div>

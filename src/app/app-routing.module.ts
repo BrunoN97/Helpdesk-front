@@ -1,3 +1,4 @@
+import { CadastroOrcamentoComponent } from './components/orcamento/cadastro-orcamento/cadastro-orcamento.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
@@ -36,6 +37,8 @@ const routes: Routes = [
 
       { path: 'chamados', component: ChamadoListComponent },
       { path: 'chamados/create', component: ChamadoCreateComponent },
+
+      { path: 'orcamento/create', component: CadastroOrcamentoComponent },
     ],
   },
 ];
