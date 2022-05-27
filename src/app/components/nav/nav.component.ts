@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.router.navigate(['orcamento/create']);
+    this.router.navigate(['orcamento/update/1']);
   }
 
   logout() {
