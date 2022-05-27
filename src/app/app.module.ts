@@ -51,6 +51,7 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { CadastroOrcamentoComponent } from './components/orcamento/cadastro-orcamento/cadastro-orcamento.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
     CadastroOrcamentoComponent,
+    ChamadoReadComponent,
   ],
   imports: [
     BrowserModule,
