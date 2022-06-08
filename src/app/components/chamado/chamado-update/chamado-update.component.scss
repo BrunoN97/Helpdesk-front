@@ -41,3 +41,11 @@ p {
   margin-top: 3rem;
   opacity: 0.5;
 }
+
+.month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.month-picker .mat-calendar-arrow {
+  display: none;
+}

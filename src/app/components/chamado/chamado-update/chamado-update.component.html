@@ -19,6 +19,20 @@
     </mat-form-field>
   </form>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Year</mat-label>
+    <input matInput [matDatepicker]="dp" [formControl]="date" />
+    <mat-hint>YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker
+      #dp
+      startView="multi-year"
+      (yearSelected)="setYear($event, dp)"
+      panelClass="month-picker"
+    >
+    </mat-datepicker>
+  </mat-form-field>
+
   <div class="status-prioridade">
     <mat-form-field appearance="outline">
       <mat-label>Status: {{ retornaStatus(chamado.status) }}</mat-label>
